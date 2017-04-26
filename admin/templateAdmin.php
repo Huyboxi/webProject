@@ -119,10 +119,10 @@
 		if(isset($_REQUEST['txtacount'])){
 			$acount = $_REQUEST['txtacount'];
 			include('connectsql.php');
-			$sql = "select*from admin where hoten='$acount'";
+			$sql = "select*from admin where username='$acount'";
 			$result = mysql_query($sql);
 			if(mysql_num_rows($result) != 0){
-				mysql_query("delete from admin where hoten = '$acount'");
+				mysql_query("delete from admin where username = '$acount'");
 				$notices="<div class=\"alert alert-info\">
   								DELETE SUCCESSFULLY 
 									</div>";
