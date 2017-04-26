@@ -11,7 +11,7 @@
 </head>
   <?php if(isset($_FILE)) print_r($_FILES) ?>
   <?php $notice=""; 
-  		if($_SERVER['REQUEST_METHOD'] ==="POST"){ move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],  "image/".$_FILES["fileToUpload"]["name"]);
+  		if($_SERVER['REQUEST_METHOD'] ==="POST"){ move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],  "../image/".$_FILES["fileToUpload"]["name"]);
   		$notice = "<div class=\"alert alert-success\">
                    <strong>Upfile successfull </strong>
                    </div>";
