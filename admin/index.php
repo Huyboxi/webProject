@@ -68,7 +68,7 @@
   ?>
 
 <?php 
-// luu tru traang thai dang nhap
+// luu tru trang thai dang nhap
   if(isset($_COOKIE['flag_sign_in'])){
     if($_COOKIE['flag_sign_in'] ==='true'){
       header('Location: templateAdmin.php');
@@ -81,11 +81,11 @@
 <body>
 <div id="main">
 	<div id="icon">
-		<img src="image/images.png" width="100px" height="100px" style="margin-left: 200px">
+		<img src="../image/images.png" width="100px" height="100px" style="margin-left: 200px">
 
 	</div>
 	<div id="login">
-		<form action="formLogin.php" method='POST'>
+		<form action="index.php" method='POST'>
       <p><?php if(isset($str)) echo $str;?></p>
    		 <div class="form-group">
       		<label for="email">Username:</label>
