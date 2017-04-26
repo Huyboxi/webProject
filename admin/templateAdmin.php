@@ -142,7 +142,7 @@
 if(isset($_REQUEST["signout"])){
 	if($_REQUEST["signout"] === "true"){
         setcookie("flag_sign_in","false");
-        header('Location: formLogin.php');
+        header('Location: index.php');
 }
 }
 

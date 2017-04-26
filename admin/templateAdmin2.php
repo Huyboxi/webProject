@@ -82,10 +82,11 @@ if(isset($_SERVER['REQUEST_METHOD'])){
 //signout
 if(isset($_REQUEST["signout"])){
 	if($_REQUEST["signout"] === "true"){
-        setcookie("sign_in_flg","false");
-        header('Location: formLogin.php');
+        setcookie("flag_sign_in","false");
+        header('Location: index.php');
 }
 }
+
 
 ?>
 </head>
