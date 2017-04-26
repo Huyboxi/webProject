@@ -92,7 +92,8 @@ if(isset($_REQUEST["signout"])){
 </head>
 <body>
 <div class="vien" id="container">
-	<div class="../image/FF.png">
+	<div class="vien" id="sidebar">
+		<img src="../image/FF.png">
 
 	</div>
 	<div class="vien" id="menu">
