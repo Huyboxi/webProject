@@ -16,7 +16,7 @@
                    <strong>Upfile successfull </strong>
                    </div>";
          // lay link image cho vao database
-         $link = "image/";
+         $link = "../image/";
          $link.= $_FILES['fileToUpload']['name']; 
         setcookie('imagelink', $link); 
   } 
