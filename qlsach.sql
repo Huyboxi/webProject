@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 21, 2017 lúc 05:53 CH
+-- Thời gian đã tạo: Th4 26, 2017 lúc 04:04 CH
 -- Phiên bản máy phục vụ: 10.1.21-MariaDB
 -- Phiên bản PHP: 5.6.30
 
@@ -44,7 +44,6 @@ INSERT INTO `admin` (`ID`, `USERNAME`, `PASSWORD`, `QUYENHAN`) VALUES
 (50, 'hoangboxi', '1', 3),
 (51, 'hoangboxi1', 'a', 1),
 (52, 'hoangboxi12', '1', 2),
-(53, '', '', 0),
 (54, 'huydz', '8b35a33c3dd27adff0b0b172f5842445', 1);
 
 -- --------------------------------------------------------
@@ -90,14 +89,14 @@ CREATE TABLE `giaodich` (
 
 CREATE TABLE `sach` (
   `SACHID` int(11) NOT NULL,
-  `TENSACH` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `LOAISACH` varchar(100) NOT NULL,
+  `TENSACH` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
+  `LOAISACH` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `GIASACH` decimal(15,4) NOT NULL DEFAULT '0.0000',
-  `TACGIA` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `NXB` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `MOTA` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `TACGIA` varchar(50) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL DEFAULT '',
+  `NXB` varchar(50) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL DEFAULT '',
+  `MOTA` text CHARACTER SET utf8 COLLATE utf8_vietnamese_ci,
   `GIAMGIA` int(11) NOT NULL,
-  `IMAGELINK` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `IMAGELINK` varchar(100) CHARACTER SET utf8 COLLATE utf8_vietnamese_ci NOT NULL,
   `CREATED` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -117,7 +116,8 @@ INSERT INTO `sach` (`SACHID`, `TENSACH`, `LOAISACH`, `GIASACH`, `TACGIA`, `NXB`,
 (50, 'Nha co nhieu mang nhen2', 'truyen ngan', '100021.0000', 'Oda', 'KimDong', 'sdadsasdadasd', 10, 'image/photo2', '2017-04-08'),
 (51, 'Nha co nhieu mang nhen2', 'truyen ngan', '100021.0000', 'Oda', 'KimDong', 'sdadsasdadasd', 10, 'image/photo2', '2017-04-08'),
 (52, 'sad', 'asdad', '0.0000', 'asd', 'asd', 'sada', 10, 'asd', '2017-04-14'),
-(53, 'sad', 'asdad', '0.0000', 'asd', 'asd', 'sada', 10, 'asd', '2017-04-14');
+(53, 'sad', 'asdad', '0.0000', 'asd', 'asd', 'sada', 10, 'asd', '2017-04-14'),
+(56, 'vÃ²ng xoÃ¡y cuá»™c Ä‘á»i', 'tá»± sá»±', '8888888.0000', 'Äá»—', 'kim Ä‘á»“ng', 'sÃ¡ch hay láº¯m', 5, 'image/tuyen-tap-nhung-hinh-anh-girl-xinh-dang-yeu-nhat-viet-nam-9.jpg', '2017-04-05');
 
 -- --------------------------------------------------------
 
@@ -201,12 +201,12 @@ ALTER TABLE `giaodich`
 -- AUTO_INCREMENT cho bảng `sach`
 --
 ALTER TABLE `sach`
-  MODIFY `SACHID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `SACHID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT cho bảng `thanhvien`
 --
 ALTER TABLE `thanhvien`
-  MODIFY `IDTV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `IDTV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
